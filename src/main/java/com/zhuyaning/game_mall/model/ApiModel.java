@@ -3,7 +3,6 @@ package com.zhuyaning.game_mall.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 /***
  *   Created by IntelliJ IDEA.
@@ -15,7 +14,6 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class ApiModel<T> {
     private int status;
     private String apiMsg;

@@ -18,9 +18,9 @@ import java.time.LocalDateTime;
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {
 
-    /***
+    /**
      * 插入时的填充策略
-     * @param metaObject
+     * @param metaObject 元数据
      */
     @Override
     public void insertFill(MetaObject metaObject) {
@@ -28,9 +28,9 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.strictInsertFill(metaObject, "gmt_modifie", LocalDateTime.class, LocalDateTime.now());
     }
 
-    /***
+    /**
      * 更新时的填充策略
-     * @param metaObject
+     * @param metaObject 元数据
      */
     @Override
     public void updateFill(MetaObject metaObject) {
