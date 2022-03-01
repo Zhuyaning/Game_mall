@@ -5,9 +5,7 @@ package com.zhuyaning.game_mall;
 
 @SpringBootApplication
 public class GameMallApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(GameMallApplication.class, args);
     }
-
 }
