@@ -35,8 +35,8 @@ public class User {
     private Integer deleted;
 
     @TableField(fill = FieldFill.INSERT)
-    private LocalDateTime gmt_create;
+    private LocalDateTime gmt_create; //NOSONAR
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime gmt_modifie;
+    private LocalDateTime gmt_modifie;//NOSONAR
 }

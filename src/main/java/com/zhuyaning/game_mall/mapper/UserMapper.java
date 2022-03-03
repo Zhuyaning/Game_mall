@@ -1,6 +1,7 @@
 package com.zhuyaning.game_mall.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zhuyaning.game_mall.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /***
@@ -10,5 +11,5 @@ import org.apache.ibatis.annotations.Mapper;
  *   Time: 18:02
  */
 @Mapper
-public interface UserMapper extends BaseMapper {
+public interface UserMapper extends BaseMapper<User> {
 }
