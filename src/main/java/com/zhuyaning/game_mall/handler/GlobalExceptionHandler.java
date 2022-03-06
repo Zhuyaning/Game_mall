@@ -30,7 +30,6 @@ public class GlobalExceptionHandler {
             ApiModel<String> apiModel = new ApiModel<>();
             apiModel.setStatus(sysTemException.errorCode);
             apiModel.setApiMsg(sysTemException.getMessage());
-
             return apiModel;
         } else {
             logger.error(exception.getMessage());
