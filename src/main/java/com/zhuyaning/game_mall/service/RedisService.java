@@ -1,9 +1,8 @@
 package com.zhuyaning.game_mall.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /***
  *   Created by IntelliJ IDEA.
@@ -14,8 +13,12 @@ import javax.annotation.Resource;
 @Service
 public class RedisService {
 
-    @Resource
     StringRedisTemplate redisTemplate;
+
+    @Autowired
+    public RedisService(StringRedisTemplate redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * 从redis取到对应的值。
