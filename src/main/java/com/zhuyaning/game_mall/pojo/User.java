@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "sys_user")
 public class User {
 
     @TableId(type = IdType.ASSIGN_ID)
