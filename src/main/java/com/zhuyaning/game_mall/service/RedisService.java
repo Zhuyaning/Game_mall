@@ -2,7 +2,7 @@ package com.zhuyaning.game_mall.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /***
  *   Created by IntelliJ IDEA.
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  *   Date: 2022/04/18
  *   Time: 23:58
  */
-@Service
+@Component
 public class RedisService {
 
     StringRedisTemplate redisTemplate;
