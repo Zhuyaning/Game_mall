@@ -1,43 +1,122 @@
 package com.zhuyaning.game_mall.pojo;
 
-import com.baomidou.mybatisplus.annotation.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 /**
- *   Created by IntelliJ IDEA.
- *   User: ZhuYaning
- *   Date: 2022/02/23
- *   Time: 18:01
+ * Created by IntelliJ IDEA.
+ * User: ZhuYaning
+ * Date: 2022/02/23
+ * Time: 18:01
  */
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@TableName(value = "sys_user")
+@Entity
+@Table(name = "sys_user")
 public class User {
 
-    @TableId(type = IdType.ASSIGN_ID)
+    @Id
+    @Column(name = "id", unique = true, nullable = false, columnDefinition = "varchar(30)")
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "age")
     private Integer age;
 
+    @Column(name = "email")
     private String email;
 
-    @Version
+    @Column(name = "version")
     private Integer version;
 
-    @TableLogic
+    @Column(name = "deleted")
     private Integer deleted;
 
-    @TableField(fill = FieldFill.INSERT)
-    private LocalDateTime gmt_create; //NOSONAR
+    @Column(name = "gmt_create")
+    private LocalDateTime gmtCreate;
 
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime gmt_modifie;//NOSONAR
+    @Column(name = "gmt_modifie")
+    private LocalDateTime gmtModifie;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+
+    public LocalDateTime getGmtCreate() {
+        return gmtCreate;
+    }
+
+    public void setGmtCreate(LocalDateTime gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
+
+    public LocalDateTime getGmtModifie() {
+        return gmtModifie;
+    }
+
+    public void setGmtModifie(LocalDateTime gmtModifie) {
+        this.gmtModifie = gmtModifie;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", version=" + version +
+                ", deleted=" + deleted +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModifie=" + gmtModifie +
+                '}';
+    }
 }

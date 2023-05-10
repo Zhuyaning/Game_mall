@@ -29,12 +29,3 @@ spring:
   thymeleaf:
     check-template: false
     check-template-location: false
-
-# mybatis plus相关配置
-mybatis-plus:
-  global-config:
-    db-config:
-      logic-delete-field: deleted
-      logic-delete-value: 1
-      logic-not-delete-value: 0
-
