@@ -7,7 +7,6 @@ package com.zhuyaning.game_mall.annotation;
  *   Time: 23:44
  */
 
-
 import java.lang.annotation.*;
 
 /**
@@ -17,4 +16,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface IgnoreAuth {
+
 }

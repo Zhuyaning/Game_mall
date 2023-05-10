@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class GameMallApplicationTests {
 
-
     @Autowired
     UserMapper mapper;
 
@@ -18,5 +17,4 @@ class GameMallApplicationTests {
         User user = mapper.selectById(123);
         System.out.println(user);
     }
-
 }

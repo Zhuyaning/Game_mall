@@ -16,14 +16,13 @@ import javax.transaction.SystemException;
  */
 
 public class GlobalExceptionHandler {
+
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler
     @ResponseBody
     public ApiModel<String> busyExceptionHandler(Exception exception) {
-
         logger.error(exception.getMessage());
-
         //判断是否是自定义的业务异常
         if (exception instanceof SystemException) {
             SystemException sysTemException = (SystemException) exception;

@@ -7,7 +7,7 @@ spring:
   profiles:
     active: dev
 
-  #  redis的配置
+  # redis的配置
   redis:
     host: 127.0.0.1
     port: 6379
@@ -15,28 +15,22 @@ spring:
     connect-timeout: 30000
     timeout: 30000
 
-
-  #    数据库相关配置
+  # 数据库相关配置
   datasource:
-    druid:
-      username: root
-      password: 123456
-      url: jdbc:mysql://localhost:3306/mybatis_plus?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-      driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mybatis_plus?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
-    #    关闭jpa警告
+    # 关闭jpa警告
     open-in-view: false
-
-  #    关闭thymeleaf警告
+  # 关闭thymeleaf警告
   thymeleaf:
     check-template: false
     check-template-location: false
 
-
-
-
-#  mybatis plus相关配置
+# mybatis plus相关配置
 mybatis-plus:
   global-config:
     db-config:

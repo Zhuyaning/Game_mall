@@ -2,7 +2,7 @@ package com.zhuyaning.game_mall.model;
 
 import java.time.LocalDateTime;
 
-/***
+/**
  *   Created by IntelliJ IDEA.
  *   User: ZhuYaning
  *   Date: 2022/02/23
@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
  */
 
 public class ApiModel<T> {
+
     private int status;
     private String apiMsg;
     private T data;

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping("/userInfo")
-    ApiModel<User> getUserInfo(){
+    ApiModel<User> getUserInfo() {
         User user = new User();
         return new ApiModel<>(user);
     }

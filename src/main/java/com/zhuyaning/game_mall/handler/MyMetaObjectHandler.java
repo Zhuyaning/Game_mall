@@ -20,6 +20,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     /**
      * 插入时的填充策略
+     *
      * @param metaObject 元数据
      */
     @Override
@@ -30,6 +31,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     /**
      * 更新时的填充策略
+     *
      * @param metaObject 元数据
      */
     @Override

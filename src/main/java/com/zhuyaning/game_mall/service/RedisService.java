@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
-/***
+/**
  *   Created by IntelliJ IDEA.
  *   User: ZhuYaning
  *   Date: 2022/04/18
